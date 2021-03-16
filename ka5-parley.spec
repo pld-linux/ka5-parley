@@ -1,15 +1,15 @@
-%define		kdeappsver	19.04.1
+%define		kdeappsver	20.12.3
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		parley
 Summary:	parley
 Name:		ka5-%{kaname}
-Version:	19.04.1
+Version:	20.12.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
-Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	ddaaedcba6dc4959fd87cb65809f5398
+Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	2d8a5b9f2457aa69f9625fecf78aab06
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel
 BuildRequires:	Qt5Core-devel >= %{qtver}
@@ -101,8 +101,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-/etc/xdg/parley-themes.knsrc
-/etc/xdg/parley.knsrc
 %attr(755,root,root) %{_bindir}/parley
 %{_desktopdir}/org.kde.parley.desktop
 %{_datadir}/config.kcfg/documentsettings.kcfg
@@ -250,3 +248,5 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/parley/xslt
 %{_datadir}/parley/xslt/flashcards.xsl
 %{_datadir}/parley/xslt/table.xsl
+%{_datadir}/knsrcfiles/parley-themes.knsrc
+%{_datadir}/knsrcfiles/parley.knsrc
