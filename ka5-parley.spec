@@ -5,12 +5,12 @@
 Summary:	parley
 Name:		ka5-%{kaname}
 Version:	21.08.0
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
-Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
 # Source0-md5:	73889d231b8efc7286e050df841f448e
-URL:		http://www.kde.org/
+URL:		https://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Gui-devel >= 5.11.1
