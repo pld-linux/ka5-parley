@@ -1,15 +1,15 @@
-%define		kdeappsver	21.08.3
+%define		kdeappsver	21.12.0
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		parley
 Summary:	parley
 Name:		ka5-%{kaname}
-Version:	21.08.3
+Version:	21.12.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	8ad7592d8c00a296a5d399dbed46021f
+# Source0-md5:	e0e52e751fc1acc8da128825a50c2842
 URL:		https://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel
 BuildRequires:	Qt5Core-devel >= %{qtver}
@@ -199,45 +199,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kxmlgui5/parley/themes/theme_reference_preview.jpg
 %{_datadir}/metainfo/org.kde.parley.appdata.xml
 %dir %{_datadir}/parley
-%dir %{_datadir}/parley/plugins
-%{_datadir}/parley/plugins/example.desktop
-%{_datadir}/parley/plugins/example.py
-%{_datadir}/parley/plugins/google_dictionary.desktop
-%{_datadir}/parley/plugins/google_dictionary.py
-%{_datadir}/parley/plugins/leo-dict.desktop
-%{_datadir}/parley/plugins/leo-dict.py
-%dir %{_datadir}/parley/plugins/mwclient
-%{_datadir}/parley/plugins/mwclient/LICENSE.md
-%{_datadir}/parley/plugins/mwclient/README.rst
-%{_datadir}/parley/plugins/mwclient/__init__.py
-%{_datadir}/parley/plugins/mwclient/client.py
-%{_datadir}/parley/plugins/mwclient/errors.py
-%{_datadir}/parley/plugins/mwclient/ex.py
-%{_datadir}/parley/plugins/mwclient/image.py
-%{_datadir}/parley/plugins/mwclient/listing.py
-%{_datadir}/parley/plugins/mwclient/page.py
-%dir %{_datadir}/parley/plugins/mwclient/requests_oauthlib
-%{_datadir}/parley/plugins/mwclient/requests_oauthlib/__init__.py
-%dir %{_datadir}/parley/plugins/mwclient/requests_oauthlib/compliance_fixes
-%{_datadir}/parley/plugins/mwclient/requests_oauthlib/compliance_fixes/__init__.py
-%{_datadir}/parley/plugins/mwclient/requests_oauthlib/compliance_fixes/douban.py
-%{_datadir}/parley/plugins/mwclient/requests_oauthlib/compliance_fixes/facebook.py
-%{_datadir}/parley/plugins/mwclient/requests_oauthlib/compliance_fixes/fitbit.py
-%{_datadir}/parley/plugins/mwclient/requests_oauthlib/compliance_fixes/linkedin.py
-%{_datadir}/parley/plugins/mwclient/requests_oauthlib/compliance_fixes/mailchimp.py
-%{_datadir}/parley/plugins/mwclient/requests_oauthlib/compliance_fixes/slack.py
-%{_datadir}/parley/plugins/mwclient/requests_oauthlib/compliance_fixes/weibo.py
-%{_datadir}/parley/plugins/mwclient/requests_oauthlib/oauth1_auth.py
-%{_datadir}/parley/plugins/mwclient/requests_oauthlib/oauth1_session.py
-%{_datadir}/parley/plugins/mwclient/requests_oauthlib/oauth2_auth.py
-%{_datadir}/parley/plugins/mwclient/requests_oauthlib/oauth2_session.py
-%{_datadir}/parley/plugins/mwclient/six.LICENSE
-%{_datadir}/parley/plugins/mwclient/six.README
-%{_datadir}/parley/plugins/mwclient/six.py
-%{_datadir}/parley/plugins/mwclient/sleep.py
-%{_datadir}/parley/plugins/mwclient/util.py
-%{_datadir}/parley/plugins/wiktionary_sound.desktop
-%{_datadir}/parley/plugins/wiktionary_sound.py
 %dir %{_datadir}/parley/themes
 %{_datadir}/parley/themes/bees_theme.desktop
 %{_datadir}/parley/themes/bees_theme.svgz
@@ -245,7 +206,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/parley/themes/theme_reference.desktop
 %{_datadir}/parley/themes/theme_reference.svgz
 %{_datadir}/parley/themes/theme_reference_preview.jpg
-%{_datadir}/parley/tips
 %dir %{_datadir}/parley/xslt
 %{_datadir}/parley/xslt/flashcards.xsl
 %{_datadir}/parley/xslt/table.xsl
