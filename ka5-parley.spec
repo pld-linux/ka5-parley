@@ -1,15 +1,15 @@
-%define		kdeappsver	21.12.0
+%define		kdeappsver	21.12.1
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		parley
 Summary:	parley
 Name:		ka5-%{kaname}
-Version:	21.12.0
+Version:	21.12.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	e0e52e751fc1acc8da128825a50c2842
+# Source0-md5:	109ac3026b45a08832d8d4bd34d243bb
 URL:		https://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel
 BuildRequires:	Qt5Core-devel >= %{qtver}
