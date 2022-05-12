@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	22.04.0
+%define		kdeappsver	22.04.1
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		parley
 Summary:	parley
 Name:		ka5-%{kaname}
-Version:	22.04.0
+Version:	22.04.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	8b83db6395a229e38b6768bcab13580e
+# Source0-md5:	6c7a83c01a15288fc04fcea1f1bf1058
 URL:		https://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel
 BuildRequires:	Qt5Core-devel >= %{qtver}
@@ -30,7 +30,7 @@ BuildRequires:	Qt5WebEngine-devel >= 5.11.1
 BuildRequires:	Qt5Widgets-devel >= 5.11.1
 BuildRequires:	cmake >= 2.8.12
 BuildRequires:	gettext-devel
-BuildRequires:	ka5-libkeduvocdocument-devel >= %{kdeapssver}
+BuildRequires:	ka5-libkeduvocdocument-devel >= %{kdeappsver}
 BuildRequires:	kf5-extra-cmake-modules >= %{kframever}
 BuildRequires:	kf5-kcmutils-devel >= %{kframever}
 BuildRequires:	kf5-kconfig-devel >= %{kframever}
