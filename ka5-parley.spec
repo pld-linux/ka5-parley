@@ -1,50 +1,51 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.01.95
+%define		kdeappsver	23.08.4
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		parley
 Summary:	parley
 Name:		ka5-%{kaname}
-Version:	24.01.95
-Release:	0.1
+Version:	23.08.4
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
-Source0:	https://download.kde.org/unstable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	ff5af293da4d33fa437c5b8aa9c515ca
+Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	b81717d95ca23aa902da5493380aa67f
 URL:		https://www.kde.org/
-BuildRequires:	Qt6Concurrent-devel
-BuildRequires:	Qt6Core-devel >= %{qtver}
-BuildRequires:	Qt6Gui-devel >= 5.11.1
-BuildRequires:	Qt6Multimedia-devel
-BuildRequires:	Qt6Network-devel >= 5.11.1
-BuildRequires:	Qt6Positioning-devel >= 5.11.1
-BuildRequires:	Qt6PrintSupport-devel >= 5.11.1
-BuildRequires:	Qt6Qml-devel >= 5.11.1
-BuildRequires:	Qt6Quick-devel >= 5.11.1
-BuildRequires:	Qt6Svg-devel
-BuildRequires:	Qt6Test-devel
-BuildRequires:	Qt6WebChannel-devel >= 5.11.1
-BuildRequires:	Qt6WebEngine-devel >= 5.11.1
-BuildRequires:	Qt6Widgets-devel >= 5.11.1
+BuildRequires:	Qt5Concurrent-devel
+BuildRequires:	Qt5Core-devel >= %{qtver}
+BuildRequires:	Qt5Gui-devel >= 5.11.1
+BuildRequires:	Qt5Multimedia-devel
+BuildRequires:	Qt5Network-devel >= 5.11.1
+BuildRequires:	Qt5Positioning-devel >= 5.11.1
+BuildRequires:	Qt5PrintSupport-devel >= 5.11.1
+BuildRequires:	Qt5Qml-devel >= 5.11.1
+BuildRequires:	Qt5Quick-devel >= 5.11.1
+BuildRequires:	Qt5Svg-devel
+BuildRequires:	Qt5Test-devel
+BuildRequires:	Qt5WebChannel-devel >= 5.11.1
+BuildRequires:	Qt5WebEngine-devel >= 5.11.1
+BuildRequires:	Qt5Widgets-devel >= 5.11.1
 BuildRequires:	cmake >= 3.20
 BuildRequires:	gettext-devel
 BuildRequires:	ka5-libkeduvocdocument-devel >= %{kdeappsver}
-BuildRequires:	kf6-extra-cmake-modules >= %{kframever}
-BuildRequires:	kf6-kcmutils-devel >= %{kframever}
-BuildRequires:	kf6-kconfig-devel >= %{kframever}
-BuildRequires:	kf6-kcoreaddons-devel >= %{kframever}
-BuildRequires:	kf6-kcrash-devel >= %{kframever}
-BuildRequires:	kf6-kdoctools-devel >= %{kframever}
-BuildRequires:	kf6-ki18n-devel >= %{kframever}
-BuildRequires:	kf6-kio-devel >= %{kframever}
-BuildRequires:	kf6-knewstuff-devel >= %{kframever}
-BuildRequires:	kf6-knotifications-devel >= %{kframever}
-BuildRequires:	kf6-kxmlgui-devel >= %{kframever}
-BuildRequires:	kf6-sonnet-devel >= %{kframever}
+BuildRequires:	kf5-extra-cmake-modules >= %{kframever}
+BuildRequires:	kf5-kcmutils-devel >= %{kframever}
+BuildRequires:	kf5-kconfig-devel >= %{kframever}
+BuildRequires:	kf5-kcoreaddons-devel >= %{kframever}
+BuildRequires:	kf5-kcrash-devel >= %{kframever}
+BuildRequires:	kf5-kdoctools-devel >= %{kframever}
+BuildRequires:	kf5-ki18n-devel >= %{kframever}
+BuildRequires:	kf5-kio-devel >= %{kframever}
+BuildRequires:	kf5-knewstuff-devel >= %{kframever}
+BuildRequires:	kf5-knotifications-devel >= %{kframever}
+BuildRequires:	kf5-kross-devel >= %{kframever}
+BuildRequires:	kf5-kxmlgui-devel >= %{kframever}
+BuildRequires:	kf5-sonnet-devel >= %{kframever}
 BuildRequires:	ninja
-BuildRequires:	qt6-build >= %{qtver}
+BuildRequires:	qt5-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
 BuildRequires:	shared-mime-info
 BuildRequires:	tar >= 1:1.22
@@ -129,11 +130,107 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/config.kcfg/documentsettings.kcfg
 %{_datadir}/config.kcfg/languagesettings.kcfg
 %{_datadir}/config.kcfg/parley.kcfg
-%{_iconsdir}/hicolor/*x*/apps/parley.png
-%{_iconsdir}/hicolor/scalable/apps/parley*.svgz
-%{_iconsdir}/oxygen/*x*/actions/*.png
-%{_iconsdir}/oxygen/scalable/actions/*.svgz
+%{_iconsdir}/hicolor/128x128/apps/parley.png
+%{_iconsdir}/hicolor/16x16/apps/parley.png
+%{_iconsdir}/hicolor/32x32/apps/parley.png
+%{_iconsdir}/hicolor/48x48/apps/parley.png
+%{_iconsdir}/hicolor/64x64/apps/parley.png
+%{_iconsdir}/hicolor/scalable/apps/parley-parley.svgz
+%{_iconsdir}/hicolor/scalable/apps/parley-simple.svgz
+%{_iconsdir}/hicolor/scalable/apps/parley.svgz
+%{_iconsdir}/oxygen/16x16/actions/cards-block.png
+%{_iconsdir}/oxygen/16x16/actions/edit-entry.png
+%{_iconsdir}/oxygen/16x16/actions/edit-table-row.png
+%{_iconsdir}/oxygen/16x16/actions/lesson-add.png
+%{_iconsdir}/oxygen/16x16/actions/lesson-remove.png
+%{_iconsdir}/oxygen/16x16/actions/list-add-card.png
+%{_iconsdir}/oxygen/16x16/actions/list-remove-card.png
+%{_iconsdir}/oxygen/16x16/actions/multiple-choice.png
+%{_iconsdir}/oxygen/16x16/actions/practice-setup.png
+%{_iconsdir}/oxygen/16x16/actions/practice-start.png
+%{_iconsdir}/oxygen/16x16/actions/practice-stop.png
+%{_iconsdir}/oxygen/16x16/actions/remove-duplicates.png
+%{_iconsdir}/oxygen/16x16/actions/set-language.png
+%{_iconsdir}/oxygen/16x16/actions/specific-setup.png
+%{_iconsdir}/oxygen/22x22/actions/cards-block.png
+%{_iconsdir}/oxygen/22x22/actions/edit-entry.png
+%{_iconsdir}/oxygen/22x22/actions/edit-table-row.png
+%{_iconsdir}/oxygen/22x22/actions/lesson-add.png
+%{_iconsdir}/oxygen/22x22/actions/lesson-remove.png
+%{_iconsdir}/oxygen/22x22/actions/list-add-card.png
+%{_iconsdir}/oxygen/22x22/actions/list-remove-card.png
+%{_iconsdir}/oxygen/22x22/actions/multiple-choice.png
+%{_iconsdir}/oxygen/22x22/actions/practice-setup.png
+%{_iconsdir}/oxygen/22x22/actions/practice-start.png
+%{_iconsdir}/oxygen/22x22/actions/practice-stop.png
+%{_iconsdir}/oxygen/22x22/actions/remove-duplicates.png
+%{_iconsdir}/oxygen/22x22/actions/set-language.png
+%{_iconsdir}/oxygen/22x22/actions/specific-setup.png
+%{_iconsdir}/oxygen/32x32/actions/cards-block.png
+%{_iconsdir}/oxygen/32x32/actions/edit-entry.png
+%{_iconsdir}/oxygen/32x32/actions/edit-table-row.png
+%{_iconsdir}/oxygen/32x32/actions/lesson-add.png
+%{_iconsdir}/oxygen/32x32/actions/lesson-remove.png
+%{_iconsdir}/oxygen/32x32/actions/list-add-card.png
+%{_iconsdir}/oxygen/32x32/actions/list-remove-card.png
+%{_iconsdir}/oxygen/32x32/actions/multiple-choice.png
+%{_iconsdir}/oxygen/32x32/actions/practice-setup.png
+%{_iconsdir}/oxygen/32x32/actions/practice-start.png
+%{_iconsdir}/oxygen/32x32/actions/practice-stop.png
+%{_iconsdir}/oxygen/32x32/actions/remove-duplicates.png
+%{_iconsdir}/oxygen/32x32/actions/set-language.png
+%{_iconsdir}/oxygen/32x32/actions/specific-setup.png
+%{_iconsdir}/oxygen/48x48/actions/cards-block.png
+%{_iconsdir}/oxygen/48x48/actions/edit-entry.png
+%{_iconsdir}/oxygen/48x48/actions/edit-table-row.png
+%{_iconsdir}/oxygen/48x48/actions/lesson-add.png
+%{_iconsdir}/oxygen/48x48/actions/lesson-remove.png
+%{_iconsdir}/oxygen/48x48/actions/list-add-card.png
+%{_iconsdir}/oxygen/48x48/actions/list-remove-card.png
+%{_iconsdir}/oxygen/48x48/actions/multiple-choice.png
+%{_iconsdir}/oxygen/48x48/actions/practice-setup.png
+%{_iconsdir}/oxygen/48x48/actions/practice-start.png
+%{_iconsdir}/oxygen/48x48/actions/practice-stop.png
+%{_iconsdir}/oxygen/48x48/actions/remove-duplicates.png
+%{_iconsdir}/oxygen/48x48/actions/set-language.png
+%{_iconsdir}/oxygen/48x48/actions/specific-setup.png
+%{_iconsdir}/oxygen/scalable/actions/cards-block.svgz
+%{_iconsdir}/oxygen/scalable/actions/edit-entry.svgz
+%{_iconsdir}/oxygen/scalable/actions/edit-table-row.svgz
+%{_iconsdir}/oxygen/scalable/actions/lesson-add.svgz
+%{_iconsdir}/oxygen/scalable/actions/lesson-remove.svgz
+%{_iconsdir}/oxygen/scalable/actions/list-add-card.svgz
+%{_iconsdir}/oxygen/scalable/actions/list-remove-card.svgz
+%{_iconsdir}/oxygen/scalable/actions/practice-setup.svgz
+%{_iconsdir}/oxygen/scalable/actions/practice-start.svgz
+%{_iconsdir}/oxygen/scalable/actions/remove-duplicates.svgz
+%{_iconsdir}/oxygen/scalable/actions/set-language.svgz
+%{_iconsdir}/oxygen/scalable/actions/specific-setup.svgz
+%dir %{_datadir}/kxmlgui5/parley
+%{_datadir}/kxmlgui5/parley/dashboardui.rc
+%{_datadir}/kxmlgui5/parley/editorui.rc
+%{_datadir}/kxmlgui5/parley/parleyui.rc
+%{_datadir}/kxmlgui5/parley/practicesummaryui.rc
+%{_datadir}/kxmlgui5/parley/practiceui.rc
+%{_datadir}/kxmlgui5/parley/statisticsui.rc
+%dir %{_datadir}/kxmlgui5/parley/themes
+%{_datadir}/kxmlgui5/parley/themes/bees_theme.desktop
+%{_datadir}/kxmlgui5/parley/themes/bees_theme.svgz
+%{_datadir}/kxmlgui5/parley/themes/bees_theme_preview.jpg
+%{_datadir}/kxmlgui5/parley/themes/theme_reference.desktop
+%{_datadir}/kxmlgui5/parley/themes/theme_reference.svgz
+%{_datadir}/kxmlgui5/parley/themes/theme_reference_preview.jpg
 %{_datadir}/metainfo/org.kde.parley.appdata.xml
-%{_datadir}/parley
+%dir %{_datadir}/parley
+%dir %{_datadir}/parley/themes
+%{_datadir}/parley/themes/bees_theme.desktop
+%{_datadir}/parley/themes/bees_theme.svgz
+%{_datadir}/parley/themes/bees_theme_preview.jpg
+%{_datadir}/parley/themes/theme_reference.desktop
+%{_datadir}/parley/themes/theme_reference.svgz
+%{_datadir}/parley/themes/theme_reference_preview.jpg
+%dir %{_datadir}/parley/xslt
+%{_datadir}/parley/xslt/flashcards.xsl
+%{_datadir}/parley/xslt/table.xsl
 %{_datadir}/knsrcfiles/parley-themes.knsrc
 %{_datadir}/knsrcfiles/parley.knsrc
